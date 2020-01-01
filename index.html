@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+
+    .button {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px rgb(41, 40, 40);
+    }
+
+    .button:hover {
+        background-color: none
+    }
+
+    .button:active {
+        background-color: none;
+        box-shadow: 0 5px rgb(44, 44, 44);
+        transform: translateY(4px);
+    }
+
+    .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="https://www.basketball-reference.com/play-index/pgl_finder.cgi?request=1&match=game&year_min=1947&year_max=2019&is_playoffs=N&age_min=0&age_max=99&season_start=1&season_end=-1&pos_is_g=Y&pos_is_gf=Y&pos_is_f=Y&pos_is_fg=Y&pos_is_fc=Y&pos_is_c=Y&pos_is_cf=Y&c1stat=pts&c1comp=gt&c1val=50&order_by=pts"
+                class="w3-bar-item w3-button w3-padding-large"
+                class="button w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" target="_blank">Our
+                Data Source</a>
+            <a href="table.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+                target="_blank">First 10 rows of our Database</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="https://www.basketball-reference.com/play-index/pgl_finder.cgi?request=1&match=game&year_min=1947&year_max=2019&is_playoffs=N&age_min=0&age_max=99&season_start=1&season_end=-1&pos_is_g=Y&pos_is_gf=Y&pos_is_f=Y&pos_is_fg=Y&pos_is_fc=Y&pos_is_c=Y&pos_is_cf=Y&c1stat=pts&c1comp=gt&c1val=50&order_by=pts"
+                class="w3-bar-item w3-button w3-padding-large" target="_blank">Our Data Source</a>
+            <a href="table.html" class="w3-bar-item w3-button w3-padding-large" target="_blank">First 10 rows of our
+                Database</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">NBA 50 POINT GAMES</h1>
+        <p class="w3-xlarge">Data Science Project / Gadi Halevi</p>
+        <a href="#Get Started" class="button w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</a>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container" id="Get Started">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>My Project</h1>
+
+                <h5 class="w3-padding-32">The
+                    NBA has been an active basketball league since 1946, more than 70 years of
+                    constant action and excitment. And when watching the game of basketball, what is more exciting
+                    and
+                    thrilling to watch than seeing a player explode and shoot the lights out? A 50 point game is a
+                    rare
+                    achievment for an NBA player, and it takes both skill and opprotunity to have one. I have chose
+                    to
+                    analyse all of the games in NBA history in which a player scored 50 or more points, and see how
+                    certain intangebles affect a player's chance at having one of those legendary games.</h5>
+
+
+                <p class="w3-text-grey">My source for this project was Basketball Refrence. Basketball Refrence is a
+                    branch of a major statistical data base called Sports Refrence. This site offers regular and
+                    advanced statistics for every major sport, and it's stats are accurate and valid even for games who
+                    occured 60 years ago or even more.</p>
+
+
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <img src="imgs/NBA-logo.png">
+            </div>
+            <div class="w3-center">
+                <a href="#Learn More"
+                    class="button w3-button w3-center w3-black w3-padding-large w3-large w3-margin-top">Learn
+                    More</a></div>
+        </div>
+    </div>
+
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Learn More">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <img src="imgs/Download-Michael-Jordan-Transparent-Background-For-Designing-Projects.png">
+                <figcaption class="w3-text-grey">Michael Jordan, second all time in total 50 point games</figcaption>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>So what am I asking?</h1>
+
+
+                <h5 class="w3-padding-32">One of the questions that crossed my mind when thinking about all of the
+                    50
+                    point NBA games is about positions. The game of basketball is divided to 5 positions: The point
+                    guard, shooting guard, small forward, power forward and center. Each position has it's own uniqe
+                    traits and they all play differntly than each other. So one of the many questions I would like to
+                    ask, is
+                    which
+                    position in basketball has the most 50 point games in NBA histoty?</h5>
+
+                <div class="w3-right">
+                    <div class="w3-center">
+                        <a class="button w3-button w3-center w3-black w3-padding-large w3-large w3-margin-top"><span>More
+                                Questions</span></a></div>
+                </div>
+
+
+                <img src="imgs/NBA_data_picture.png">
+                <figcaption class="w3-text-grey">A graphic showing the spread of 50 point games among the different
+                    positions.</figcaption>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+        </div>
+
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
